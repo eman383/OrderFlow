@@ -30,11 +30,11 @@ OrderFlow is a multi-tenant order management system built specifically for home-
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="assets/Login.png" width="48%">
-  <img src="assets/Dashboard.png" width="48%">
+  <img src="assests/Login.png" width="48%">
+  <img src="assests/Dashboard.png" width="48%">
   <br>
-  <img src="assets/Menu-Package.png" width="48%">
-  <img src="assets/Menu-Item.png" width="48%">
+  <img src="assests/Menu-Package.png" width="48%">
+  <img src="assests/Menu-Item.png" width="48%">
 </div>
 
 | Schedule | Store |
