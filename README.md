@@ -5,18 +5,23 @@
 ### A SaaS platform for home-based food businesses and cloud kitchens —
 ### designed so every kitchen owner feels like they have a team behind them.
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_App-blue?style=for-the-badge)](https://orderflow-cncscth4fncpe5g3.francecentral-01.azurewebsites.net)
+<br>
+
+**👇 Click below to explore the live app!** <br>
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Click_Here_To_Explore-blue?style=for-the-badge)](https://orderflow-cncscth4fncpe5g3.francecentral-01.azurewebsites.net)
+
+<br>
+
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
 <img src="https://img.shields.io/badge/Jinja2-B41717?style=for-the-badge&logo=jinja&logoColor=white" alt="Jinja2">
 
+> 💡 **Demo Note:** The platform is currently optimized for desktop viewing and ready to explore! Mobile is functional but still a work in progress.
 
-
-
-> 🚧 **Active Development:** OrderFlow is currently optimized for desktop viewing. Mobile responsiveness and a custom domain are coming soon! 
-> 
+>
 > Try a storefront: `…/store/{your-username}`
+
 </div>
 
 ---
@@ -297,28 +302,11 @@ The frontend architecture relies on 10 distinct templates, each with its own sco
 ------
 
 
-## Run It Locally
+## Source Code
 
-**Prerequisites:** Python 3.10+
+OrderFlow is an active, proprietary SaaS platform, so the source code is kept private to protect the business logic.
 
-```bash
-# Clone the repository
-git clone https://github.com/eman383/Orderflow.git
-cd Orderflow
-
-# Create and activate a virtual environment
-python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Start the development server
-uvicorn order_flow.main:app --reload
-```
-
-Open `http://localhost:8000` in your browser.
-To preview a storefront, sign up and visit `http://localhost:8000/store/{your-username}`.
+You can fully explore the platform via the Live Demo. Feel free to reach out to me if you would like to discuss the frontend architecture and UI/UX design, or connect with my co-founder Fares to dive deeper into the FastAPI backend and deployment!
 
 ---
 
