@@ -8,6 +8,8 @@
 <br>
 
 **👇 Click below to explore the live app!** <br>
+
+
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Click_Here_To_Explore-blue?style=for-the-badge)](https://orderflow-cncscth4fncpe5g3.francecentral-01.azurewebsites.net)
 
 <br>
@@ -16,6 +18,8 @@
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
 <img src="https://img.shields.io/badge/Jinja2-B41717?style=for-the-badge&logo=jinja&logoColor=white" alt="Jinja2">
+
+
 
 > 💡 **Demo Note:** The platform is currently optimized for desktop viewing and ready to explore! Mobile is functional but still a work in progress.
 
