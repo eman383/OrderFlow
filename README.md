@@ -14,8 +14,9 @@
 
 
 
-> Custom domain coming soon &nbsp;|&nbsp; Try a storefront: `…/store/{your-username}`
-
+> 🚧 **Active Development:** OrderFlow is currently optimized for desktop viewing. Mobile responsiveness and a custom domain are coming soon! 
+> 
+> Try a storefront: `…/store/{your-username}`
 </div>
 
 ---
@@ -24,150 +25,8 @@
 
 OrderFlow is a **multi-tenant order management platform** built for Egypt's home kitchen and cloud restaurant scene. Each kitchen owner gets their own branded storefront, a live operations dashboard, schedule control, and a finance overview — without needing to touch any code.
 
-I designed and built the **entire front-facing experience**: every screen a kitchen owner interacts with, and every screen their customers see.
-
+We architected the core system together to handle multi-tenancy seamlessly. From there, I designed and built the entire front-facing experience: every screen a kitchen owner interacts with, and every screen their customers see.
 ---
-
-## UI/UX — What I Built
-
-I didn't just build screens. I mapped out **two complete user journeys** and designed every touchpoint from scratch.
-
-### Journey 1 — The Kitchen Owner
-
-A busy home cook shouldn't have to fight their software. I designed the owner-side around **speed and clarity** — at a glance, they know exactly what orders are coming in, what needs to be cooked, and what's already done.
-
-**Key design decisions:**
-- **Dashboard-first layout** — the most critical info (today's orders, item statuses) is front and center, not buried in a menu
-- **Visual order status flow** — `Pending → Ready for Pickup → Completed` designed as a clear visual progression, not just a dropdown
-- **Item-level progress tracking** — each dish gets its own check-off, so nothing slips through during a busy prep session
-- **Daily & Weekly toggle** — two views, one purpose: always knowing what's ahead
-- **Inline rescheduling** — owners can shift an order's time without leaving the dashboard
-
-### Journey 2 — The Customer
-
-The storefront is the first impression a kitchen makes. I designed it to be **frictionless and trustworthy** — no account needed, no confusion, just browse and order.
-
-**Key design decisions:**
-- Clean menu browsing with clear item and package distinction
-- Delivery slot selection that only shows available times, synced with the kitchen's schedule
-- No login wall — customers go from landing to checkout without interruption
-
----
-
-## Design System
-
-The full color system, sourced directly from the CSS variables defined in the dashboard stylesheet.
-
-### Brand & Accent
-
-| Swatch | Variable | Hex | Usage |
-|---|---|---|---|
-| ![](https://img.shields.io/badge/-%23E06C39-E06C39?style=flat-square) | `--accent-primary` | `#E06C39` | Burnt Sienna — CTAs, active nav, highlights, badges |
-| ![](https://img.shields.io/badge/-%23C05621-C05621?style=flat-square) | `--accent-hover` | `#C05621` | Darker Terracotta — pressed and hover states |
-| ![](https://img.shields.io/badge/-%2387A96B-87A96B?style=flat-square) | `--sage-green` | `#87A96B` | Sage Green — "Ready" column, positive/complete states |
-| ![](https://img.shields.io/badge/-%236D8A56-6D8A56?style=flat-square) | `--sage-dark` | `#6D8A56` | Darker Sage — sage hover and action buttons |
-
-### Backgrounds & Surfaces
-
-| Swatch | Variable | Hex | Usage |
-|---|---|---|---|
-| ![](https://img.shields.io/badge/-%23FAFAFA-FAFAFA?style=flat-square) | `--bg-canvas` | `#FAFAFA` | Off-White Cream — page canvas across all views |
-| ![](https://img.shields.io/badge/-%23FFFFFF-d0d0d0?style=flat-square) | — | `#FFFFFF` | Pure White — sidebar, cards, headers, modals |
-| ![](https://img.shields.io/badge/-%23FFF7ED-FFF7ED?style=flat-square) | — | `#FFF7ED` | Warm Tint — active nav items, enabled state backgrounds |
-| ![](https://img.shields.io/badge/-%23F3F4F6-F3F4F6?style=flat-square) | — | `#F3F4F6` | Neutral Light — inactive tabs, input backgrounds, chips |
-
-### Typography
-
-| Swatch | Variable | Hex | Usage |
-|---|---|---|---|
-| ![](https://img.shields.io/badge/-%232D3436-2D3436?style=flat-square) | `--slate-dark` | `#2D3436` | Deep Charcoal — headings, primary body text |
-| ![](https://img.shields.io/badge/-%2364748B-64748B?style=flat-square) | `--slate-muted` | `#64748B` | Muted Slate — labels, captions, secondary info |
-
-### Borders & Structure
-
-| Swatch | Variable | Hex | Usage |
-|---|---|---|---|
-| ![](https://img.shields.io/badge/-%23E5E7EB-E5E7EB?style=flat-square) | `--border-color` | `#E5E7EB` | Default border — cards, dividers, inputs |
-
-### Status & Feedback
-
-| Swatch | Hex | Usage |
-|---|---|---|
-| ![](https://img.shields.io/badge/-%23DC2626-DC2626?style=flat-square) | `#DC2626` | Error / Late orders — red border and background tint |
-| ![](https://img.shields.io/badge/-%23FFFBEB-FFFBEB?style=flat-square) | `#FFFBEB` | Warning / Notes — amber-tinted alert background |
-| ![](https://img.shields.io/badge/-%23EFF6FF-EFF6FF?style=flat-square) | `#EFF6FF` | Info / Address — blue-tinted alert background |
-
-### Design Decisions
-
-The palette splits into two distinct emotional tracks. The **warm side** — Burnt Sienna, Terracotta, and Off-White Cream — handles urgency and action: every button, badge, and active state. The **cool side** — Sage Green, Charcoal, and Muted Slate — handles completion and structure: the "Ready" column, text hierarchy, and layout scaffolding. The result is a UI where the user always knows what needs attention and what's already handled, without a single word of instruction.
-
----
-
-## User Flow
-
-### Kitchen Owner
-
-```
-Sign Up
-   |
-   v
-Set Up Menu (Items + Packages)
-   |
-   v
-Configure Schedule (Working Hours + Off-Days)
-   |
-   v
-Share Storefront URL  ──────────────────────────────────> Customer Places Order
-   |                                                               |
-   v                                                               v
-Dashboard: View Incoming Orders  <─────────────────────  Order Appears in Dashboard
-   |
-   v
-Track Item-by-Item Preparation
-   |
-   v
-Mark Order: Ready for Pickup → Completed
-   |
-   v
-Finance Dashboard: Review Revenue + Performance
-```
-
-### Customer
-
-```
-Visit /store/{username}
-   |
-   v
-Browse Menu (Items + Packages)
-   |
-   v
-Select Delivery Date & Time (available slots only)
-   |
-   v
-Submit Order
-   |
-   v
-Order Confirmed
-```
-
----
-
-## Page-by-Page Architecture
-
-I built **10 distinct templates**, each with its own scoped stylesheet. No bloated global CSS — every page loads only what it needs.
-
-| Page | Purpose | Design Focus |
-|---|---|---|
-| `login.html` | Kitchen owner sign-in | Trust, clarity, brand entry point |
-| `signup.html` | New kitchen registration | Minimal fields, low friction |
-| `dashboard.html` | Daily order management | Speed, density, zero ambiguity |
-| `weekly_dashboard.html` | Weekly overview | Scanning patterns across 7 days |
-| `menu.html` | Menu & package management | Control, hierarchy, quick edits |
-| `schedule.html` | Working hours & off-days | Calendar-like clarity |
-| `finance.html` | Revenue & profit charts | Data readability, visual hierarchy |
-| `history.html` | Past order log | Scannable, filterable records |
-| `settings.html` | Kitchen profile | Clean form design |
-| `store.html` | Public customer storefront | Customer trust, ease of ordering |
 
 ---
 
@@ -264,15 +123,130 @@ Revenue and profit breakdown across daily, weekly, monthly, and yearly timeframe
 
 ---
 
-## Browser & Device Compatibility
+## UI/UX — What I Built
 
-| Browser | Supported |
-|---|---|
-| Chrome 110+ | Yes |
-| Edge 110+ | Yes |
-| Firefox 110+ | Yes |
-| Safari 15+ | Yes |
-| Mobile browsers | Partial — responsive improvements planned |
+I didn't just build screens. We mapped out the logic for two complete user journeys, and I designed every visual touchpoint from scratch to make those journeys frictionless.
+### Journey 1 — The Kitchen Owner
+
+A busy home cook shouldn't have to fight their software. I designed the owner-side around **speed and clarity** — at a glance, they know exactly what orders are coming in, what needs to be cooked, and what's already done.
+
+**Key design decisions:**
+- **Dashboard-first layout** — the most critical info (today's orders, item statuses) is front and center, not buried in a menu
+- **Visual order status flow** — `Pending → Ready for Pickup → Completed` designed as a clear visual progression, not just a dropdown
+- **Item-level progress tracking** — each dish gets its own check-off, so nothing slips through during a busy prep session
+- **Daily & Weekly toggle** — two views, one purpose: always knowing what's ahead
+- **Inline rescheduling** — owners can shift an order's time without leaving the dashboard
+
+### Journey 2 — The Customer
+
+The storefront is the first impression a kitchen makes. I designed it to be **frictionless and trustworthy** — no account needed, no confusion, just browse and order.
+
+**Key design decisions:**
+- Clean menu browsing with clear item and package distinction
+- Delivery slot selection that only shows available times, synced with the kitchen's schedule
+- No login wall — customers go from landing to checkout without interruption
+
+---
+
+---
+
+## User Flow
+
+### Kitchen Owner
+
+```
+Sign Up
+   |
+   v
+Set Up Menu (Items + Packages)
+   |
+   v
+Configure Schedule (Working Hours + Off-Days)
+   |
+   v
+Share Storefront URL  ──────────────────────────────────> Customer Places Order
+   |                                                               |
+   v                                                               v
+Dashboard: View Incoming Orders  <─────────────────────  Order Appears in Dashboard
+   |
+   v
+Track Item-by-Item Preparation
+   |
+   v
+Mark Order: Ready for Pickup → Completed
+   |
+   v
+Finance Dashboard: Review Revenue + Performance
+```
+
+### Customer
+
+```
+Visit /store/{username}
+   |
+   v
+Browse Menu (Items + Packages)
+   |
+   v
+Select Delivery Date & Time (available slots only)
+   |
+   v
+Submit Order
+   |
+   v
+Order Confirmed
+```
+
+
+
+## Design System
+
+The full color system, sourced directly from the CSS variables defined in the dashboard stylesheet.
+
+### Brand & Accent
+
+| Swatch | Variable | Hex | Usage |
+|---|---|---|---|
+| ![](https://img.shields.io/badge/-%23E06C39-E06C39?style=flat-square) | `--accent-primary` | `#E06C39` | Burnt Sienna — CTAs, active nav, highlights, badges |
+| ![](https://img.shields.io/badge/-%23C05621-C05621?style=flat-square) | `--accent-hover` | `#C05621` | Darker Terracotta — pressed and hover states |
+| ![](https://img.shields.io/badge/-%2387A96B-87A96B?style=flat-square) | `--sage-green` | `#87A96B` | Sage Green — "Ready" column, positive/complete states |
+| ![](https://img.shields.io/badge/-%236D8A56-6D8A56?style=flat-square) | `--sage-dark` | `#6D8A56` | Darker Sage — sage hover and action buttons |
+
+### Backgrounds & Surfaces
+
+| Swatch | Variable | Hex | Usage |
+|---|---|---|---|
+| ![](https://img.shields.io/badge/-%23FAFAFA-FAFAFA?style=flat-square) | `--bg-canvas` | `#FAFAFA` | Off-White Cream — page canvas across all views |
+| ![](https://img.shields.io/badge/-%23FFFFFF-d0d0d0?style=flat-square) | — | `#FFFFFF` | Pure White — sidebar, cards, headers, modals |
+| ![](https://img.shields.io/badge/-%23FFF7ED-FFF7ED?style=flat-square) | — | `#FFF7ED` | Warm Tint — active nav items, enabled state backgrounds |
+| ![](https://img.shields.io/badge/-%23F3F4F6-F3F4F6?style=flat-square) | — | `#F3F4F6` | Neutral Light — inactive tabs, input backgrounds, chips |
+
+### Typography
+
+| Swatch | Variable | Hex | Usage |
+|---|---|---|---|
+| ![](https://img.shields.io/badge/-%232D3436-2D3436?style=flat-square) | `--slate-dark` | `#2D3436` | Deep Charcoal — headings, primary body text |
+| ![](https://img.shields.io/badge/-%2364748B-64748B?style=flat-square) | `--slate-muted` | `#64748B` | Muted Slate — labels, captions, secondary info |
+
+### Borders & Structure
+
+| Swatch | Variable | Hex | Usage |
+|---|---|---|---|
+| ![](https://img.shields.io/badge/-%23E5E7EB-E5E7EB?style=flat-square) | `--border-color` | `#E5E7EB` | Default border — cards, dividers, inputs |
+
+### Status & Feedback
+
+| Swatch | Hex | Usage |
+|---|---|---|
+| ![](https://img.shields.io/badge/-%23DC2626-DC2626?style=flat-square) | `#DC2626` | Error / Late orders — red border and background tint |
+| ![](https://img.shields.io/badge/-%23FFFBEB-FFFBEB?style=flat-square) | `#FFFBEB` | Warning / Notes — amber-tinted alert background |
+| ![](https://img.shields.io/badge/-%23EFF6FF-EFF6FF?style=flat-square) | `#EFF6FF` | Info / Address — blue-tinted alert background |
+
+### Design Decisions
+
+The palette splits into two distinct emotional tracks. The **warm side** — Burnt Sienna, Terracotta, and Off-White Cream — handles urgency and action: every button, badge, and active state. The **cool side** — Sage Green, Charcoal, and Muted Slate — handles completion and structure: the "Ready" column, text hierarchy, and layout scaffolding. The result is a UI where the user always knows what needs attention and what's already handled, without a single word of instruction.
+
+
 
 ---
 
@@ -299,6 +273,27 @@ order_flow/
 ```
 
 ---
+
+## Page-by-Page Architecture
+
+I built **10 distinct templates**, each with its own scoped stylesheet. No bloated global CSS — every page loads only what it needs.
+
+| Page | Purpose | Design Focus |
+|---|---|---|
+| `login.html` | Kitchen owner sign-in | Trust, clarity, brand entry point |
+| `signup.html` | New kitchen registration | Minimal fields, low friction |
+| `dashboard.html` | Daily order management | Speed, density, zero ambiguity |
+| `weekly_dashboard.html` | Weekly overview | Scanning patterns across 7 days |
+| `menu.html` | Menu & package management | Control, hierarchy, quick edits |
+| `schedule.html` | Working hours & off-days | Calendar-like clarity |
+| `finance.html` | Revenue & profit charts | Data readability, visual hierarchy |
+| `history.html` | Past order log | Scannable, filterable records |
+| `settings.html` | Kitchen profile | Clean form design |
+| `store.html` | Public customer storefront | Customer trust, ease of ordering |
+
+
+------
+
 
 ## Run It Locally
 
