@@ -157,9 +157,9 @@ The storefront is the first impression a kitchen makes. The design prioritizes a
 - Delivery slot selection that only shows available times, synced with the kitchen's schedule
 - No login wall — customers go from landing to checkout without interruption
 
----
 
 ---
+
 
 ## User Flow
 
