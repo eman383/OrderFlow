@@ -25,7 +25,7 @@
 
 OrderFlow is a **multi-tenant order management platform** built for Egypt's home kitchen and cloud restaurant scene. Each kitchen owner gets their own branded storefront, a live operations dashboard, schedule control, and a finance overview — without needing to touch any code.
 
-We **architected the core system together** to handle multi-tenancy seamlessly. From there, **I designed and built the entire front-facing experience**: every screen a kitchen owner interacts with, and every screen their customers see.
+We **architected the core system together** to handle multi-tenancy seamlessly. Following that, my focus shifted to leading **the frontend development** — designing and building the entire experience, from the kitchen owner's dashboard to the customer's storefront.
 
 ---
 
@@ -126,7 +126,8 @@ Revenue and profit breakdown across daily, weekly, monthly, and yearly timeframe
 
 ## UI/UX — What I Built
 
-I didn't just build screens. We mapped out the logic for two complete user journeys, and I designed every visual touchpoint from scratch to make those journeys frictionless.
+The goal went beyond just building screens. We mapped out the logic for two complete user journeys, translating that foundation into a custom visual design.
+
 ### Journey 1 — The Kitchen Owner
 
 A busy home cook shouldn't have to fight their software. I designed the owner-side around **speed and clarity** — at a glance, they know exactly what orders are coming in, what needs to be cooked, and what's already done.
@@ -140,7 +141,7 @@ A busy home cook shouldn't have to fight their software. I designed the owner-si
 
 ### Journey 2 — The Customer
 
-The storefront is the first impression a kitchen makes. I designed it to be **frictionless and trustworthy** — no account needed, no confusion, just browse and order.
+The storefront is the first impression a kitchen makes. The design prioritizes an effortless and trustworthy experience — no account needed, no confusion, just browse and order.
 
 **Key design decisions:**
 - Clean menu browsing with clear item and package distinction
@@ -277,7 +278,7 @@ order_flow/
 
 ## Page-by-Page Architecture
 
-I built **10 distinct templates**, each with its own scoped stylesheet. No bloated global CSS — every page loads only what it needs.
+The frontend architecture relies on 10 distinct templates, each with its own scoped stylesheet. No bloated global CSS — every page loads only what it needs.
 
 | Page | Purpose | Design Focus |
 |---|---|---|
