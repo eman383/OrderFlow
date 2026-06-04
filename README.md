@@ -10,7 +10,7 @@
 **👇 Click below to explore the live app!** <br>
 
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Click_Here_To_Explore-blue?style=for-the-badge)](https://orderflow-cncscth4fncpe5g3.francecentral-01.azurewebsites.net)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Click_Here_To_Explore-blue?style=for-the-badge)](https://dub.sh/orderfloow)
 
 <br>
 
